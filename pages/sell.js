@@ -1,6 +1,8 @@
+import CreateItem from '../components/CreateItem';
+
 const Sell = () => (
     <div>
-        <p>The Sell Page</p>
+        <CreateItem />
     </div>
 );
 
