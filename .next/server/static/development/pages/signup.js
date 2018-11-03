@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -108,7 +108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/jake/Development/projects/squarecandyv3/frontend/components/ErrorMessage.js";
+var _jsxFileName = "/Users/jacobsilver/Development/Projects/SquareCandyv3/SquareCandyV3Frontend/components/ErrorMessage.js";
 
 
 
@@ -179,6 +179,243 @@ DisplayError.propTypes = {
 
 /***/ }),
 
+/***/ "./components/Signin.js":
+/*!******************************!*\
+  !*** ./components/Signin.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "@babel/runtime/regenerator");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-apollo */ "react-apollo");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _styles_Form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/Form */ "./components/styles/Form.js");
+/* harmony import */ var _ErrorMessage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ErrorMessage */ "./components/ErrorMessage.js");
+/* harmony import */ var graphql__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! graphql */ "graphql");
+/* harmony import */ var graphql__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(graphql__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var graphql_anywhere__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! graphql-anywhere */ "graphql-anywhere");
+/* harmony import */ var graphql_anywhere__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(graphql_anywhere__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_User__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/User */ "./components/User.js");
+
+var _jsxFileName = "/Users/jacobsilver/Development/Projects/SquareCandyv3/SquareCandyV3Frontend/components/Signin.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    mutation SIGNIN_MUTATION($email: String!, $password: String!) {\n        signin(email: $email, password: $password) {\n            id\n            email\n            name\n        }\n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+
+
+
+
+var SIGNIN_MUTATION = graphql_tag__WEBPACK_IMPORTED_MODULE_3___default()(_templateObject());
+
+var SignIn =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(SignIn, _Component);
+
+  function SignIn() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, SignIn);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(SignIn)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      password: '',
+      email: ''
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "saveToState", function (e) {
+      _this.setState(_defineProperty({}, e.target.name, e.target.value));
+    });
+
+    return _this;
+  }
+
+  _createClass(SignIn, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Mutation"], {
+        mutation: SIGNIN_MUTATION,
+        variables: this.state,
+        refetchQueries: [{
+          query: _components_User__WEBPACK_IMPORTED_MODULE_8__["CURRENT_USER_QUERY"]
+        }],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35
+        },
+        __self: this
+      }, function (signin, _ref) {
+        var error = _ref.error,
+            loading = _ref.loading;
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_styles_Form__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          method: "post",
+          onSubmit:
+          /*#__PURE__*/
+          function () {
+            var _ref2 = _asyncToGenerator(
+            /*#__PURE__*/
+            _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+                while (1) {
+                  switch (_context.prev = _context.next) {
+                    case 0:
+                      e.preventDefault();
+                      _context.next = 3;
+                      return signin();
+
+                    case 3:
+                      _this2.setState({
+                        password: '',
+                        email: ''
+                      });
+
+                    case 4:
+                    case "end":
+                      return _context.stop();
+                  }
+                }
+              }, _callee, this);
+            }));
+
+            return function (_x) {
+              return _ref2.apply(this, arguments);
+            };
+          }(),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", {
+          disabled: loading,
+          "aria-busy": loading,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48
+          },
+          __self: this
+        }, "Sign In"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ErrorMessage__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          error: error,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+          htmlFor: "email",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50
+          },
+          __self: this
+        }, "Email", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+          type: "email",
+          name: "email",
+          placeholder: "Email",
+          value: _this2.state.email,
+          onChange: _this2.saveToState,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52
+          },
+          __self: this
+        })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+          htmlFor: "password",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 61
+          },
+          __self: this
+        }, "Password", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+          type: "password",
+          name: "password",
+          placeholder: "Password",
+          value: _this2.state.password,
+          onChange: _this2.saveToState,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 63
+          },
+          __self: this
+        })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+          type: "submit",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 71
+          },
+          __self: this
+        }, "Sign In")));
+      });
+    }
+  }]);
+
+  return SignIn;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (SignIn);
+
+/***/ }),
+
 /***/ "./components/Signup.js":
 /*!******************************!*\
   !*** ./components/Signup.js ***!
@@ -198,8 +435,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _styles_Form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/Form */ "./components/styles/Form.js");
 /* harmony import */ var _ErrorMessage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ErrorMessage */ "./components/ErrorMessage.js");
+/* harmony import */ var _components_User__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/User */ "./components/User.js");
+/* harmony import */ var graphql__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! graphql */ "graphql");
+/* harmony import */ var graphql__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(graphql__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var graphql_anywhere__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! graphql-anywhere */ "graphql-anywhere");
+/* harmony import */ var graphql_anywhere__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(graphql_anywhere__WEBPACK_IMPORTED_MODULE_8__);
 
-var _jsxFileName = "/Users/jake/Development/projects/squarecandyv3/frontend/components/Signup.js";
+var _jsxFileName = "/Users/jacobsilver/Development/Projects/SquareCandyv3/SquareCandyV3Frontend/components/Signup.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -236,6 +478,9 @@ function _templateObject() {
 }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
 
 
 
@@ -283,9 +528,12 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Mutation"], {
         mutation: SIGNUP_MUTATION,
         variables: this.state,
+        refetchQueries: [{
+          query: _components_User__WEBPACK_IMPORTED_MODULE_6__["CURRENT_USER_QUERY"]
+        }],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 36
         },
         __self: this
       }, function (signup, _ref) {
@@ -328,7 +576,7 @@ function (_Component) {
           }(),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 35
+            lineNumber: 43
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", {
@@ -336,27 +584,27 @@ function (_Component) {
           "aria-busy": loading,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 40
+            lineNumber: 48
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41
+            lineNumber: 49
           },
           __self: this
         }, "Sign Up For An Account"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ErrorMessage__WEBPACK_IMPORTED_MODULE_5__["default"], {
           error: error,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42
+            lineNumber: 50
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "email",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 43
+            lineNumber: 51
           },
           __self: this
         }, "Email", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -367,14 +615,14 @@ function (_Component) {
           onChange: _this2.saveToState,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 45
+            lineNumber: 53
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "name",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 47
+            lineNumber: 62
           },
           __self: this
         }, "Name", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -385,14 +633,14 @@ function (_Component) {
           onChange: _this2.saveToState,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 49
+            lineNumber: 64
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "password",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 51
+            lineNumber: 72
           },
           __self: this
         }, "Password", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -403,14 +651,14 @@ function (_Component) {
           onChange: _this2.saveToState,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 53
+            lineNumber: 74
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
           type: "submit",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 55
+            lineNumber: 82
           },
           __self: this
         }, "Sign Up")));
@@ -422,6 +670,68 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Signup);
+
+/***/ }),
+
+/***/ "./components/User.js":
+/*!****************************!*\
+  !*** ./components/User.js ***!
+  \****************************/
+/*! exports provided: default, CURRENT_USER_QUERY */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CURRENT_USER_QUERY", function() { return CURRENT_USER_QUERY; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-apollo */ "react-apollo");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/jacobsilver/Development/Projects/SquareCandyv3/SquareCandyV3Frontend/components/User.js";
+
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  query {\n    me{\n      id\n      email\n      name\n      permissions\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+var CURRENT_USER_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default()(_templateObject()); // the purpose of this component is to pass the payload to the children.  That way you don't have to put all this code everywhere
+// take special note of the {...props}.  This is so whatever props come into this component can also get passed down to its children
+
+var User = function User(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Query"], _extends({}, props, {
+    query: CURRENT_USER_QUERY,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }), function (payload) {
+    return props.children(payload);
+  });
+};
+
+User.PropTypes = {
+  children: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (User);
+
 
 /***/ }),
 
@@ -460,13 +770,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Signup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Signup */ "./components/Signup.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/jake/Development/projects/squarecandyv3/frontend/pages/signup.js";
+/* harmony import */ var _components_Signin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Signin */ "./components/Signin.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/jacobsilver/Development/Projects/SquareCandyv3/SquareCandyV3Frontend/pages/signup.js";
 
 
 
-var Columns = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+
+var Columns = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
   displayName: "signup__Columns",
   componentId: "jf76qp-0"
 })(["display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));grid-gap:20px;"]);
@@ -475,22 +787,16 @@ var SignupPage = function SignupPage(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Columns, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 12
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Signup__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Signup__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Signup__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Signin__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -503,7 +809,7 @@ var SignupPage = function SignupPage(props) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!*******************************!*\
   !*** multi ./pages/signup.js ***!
   \*******************************/
@@ -523,6 +829,28 @@ module.exports = __webpack_require__(/*! ./pages/signup.js */"./pages/signup.js"
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/regenerator");
+
+/***/ }),
+
+/***/ "graphql":
+/*!**************************!*\
+  !*** external "graphql" ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("graphql");
+
+/***/ }),
+
+/***/ "graphql-anywhere":
+/*!***********************************!*\
+  !*** external "graphql-anywhere" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("graphql-anywhere");
 
 /***/ }),
 
