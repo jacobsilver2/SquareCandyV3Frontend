@@ -34,7 +34,10 @@ class DeleteItem extends Component {
                     {(deleteItem, { error }) => (
                         <button onClick={ () => {
                                 if (confirm('Are you sure you want to delete this?')){
-                                    deleteItem();
+                                    // since this is an async function we can attach a "catch" to if if there's an error
+                                    deleteItem().catch(err => {
+                                        alert(err.message);
+                                    });
                                 }
                             }}>{this.props.children}</button>
                     )}
