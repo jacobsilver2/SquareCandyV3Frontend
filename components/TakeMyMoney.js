@@ -28,32 +28,39 @@ function totalItems(cart){
 }
 
 class TakeMyMoney extends Component {
-  state = {  }
 
-onToken = (res, createOrder) => {
+onToken = async (res, createOrder) => {
+  NProgress.start()
   // console.log('on token called')
   // console.log(res);
   // manually call the mutation once we have the stripe token
-  createOrder({
+  const order = await createOrder({
     variables: {
       token: res.id
-    }
+    },
   }).catch(err => {
     alert(err.message)
+  });
+  Router.push({
+    pathname: '/order',
+    query: {id: order.data.createOrder.id}
   })
 };
 
   render() {
     return (
       <User>
-        {({data: {me}}) => (
-          <Mutation mutation={CREATE_ORDER_MUTATION} refetchQueries={[{query: CURRENT_USER_QUERY}]}>
-            {(createOrder) => (
+        {({ data: { me } }) => (
+          <Mutation 
+            mutation={CREATE_ORDER_MUTATION} 
+            refetchQueries={[{ query: CURRENT_USER_QUERY }]}
+          >
+            {createOrder => (
               <StripeCheckout
                 amount={calcTotalPrice(me.cart)}
                 name="Square Candy"
                 description={`Order of ${totalItems(me.cart)} items`}
-                image={me.cart[0].item && me.cart[0].item.image}
+                image={me.cart.length && me.cart[0].item && me.cart[0].item.image}
                 stripeKey='pk_test_inbxNBuPGMyM2n8J6AFdXGeW'
                 currency='USD'
                 email={me.email}
